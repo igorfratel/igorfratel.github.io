@@ -1,4 +1,0 @@
-genoma1 genoma2 93
-genoma3 genoma4 0
-genoma5 genoma6 75
-genoma7 genoma8 50
