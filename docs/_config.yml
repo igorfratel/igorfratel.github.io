@@ -72,3 +72,6 @@ author:
   bio              : "Software Engineer"
   location         : "São Paulo, Brazil"
   email            : "igorfratelsantana@gmail.com"
+  
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
