@@ -1,5 +1,6 @@
 ---
 layout: single
+author_profile: true
 title:  "Welcome to Jekyll!"
 date:   2020-09-05 21:28:47 -0300
 categories: jekyll update
