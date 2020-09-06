@@ -68,7 +68,7 @@ markdown: kramdown
 # Site Author
 author:
   name             : "Igor Fratel Santana"
-  avatar           : "/assets/images/bio-photo.png"
+  avatar           : "/assets/images/bio-photo.jpg"
   bio              : "Software Engineer"
   location         : "São Paulo, Brazil"
   email            : "igorfratelsantana@gmail.com"
