@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Igor Fratel's homepage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="w3-bar w3-pink">
+            <a href="index.html" class="w3-button w3-bar-item w3-hover-white w3-round">Home</a>
+            <a href="aboutme.html" class="w3-button w3-bar-item w3-hover-white w3-round">About Me</a>
+            <a href="projects.html" class="w3-button w3-bar-item w3-hover-white w3-round">Projects</a>
+            <a href="posts.html" class="w3-button w3-bar-item w3-hover-white w3-round">Posts</a>
+            <a href="sources.html" class="w3-button w3-bar-item w3-hover-white w3-round">Sources</a>
+        </nav>
+        <nav class="w3-panel w3-light-gray w3-text-dark-gray">
+            <h2>Teorema Chinês do Resto</h2>
+            <p>Sejam \(m_{1}, m_{2}, m_{3}\dots m_{k}\) inteiros positivos primos dois a dois.<br>
+               Então o sistema: <br>
+               \(x \equiv A_{1}(mod m_{1})\)<br>
+               \(x \equiv A_{2}(mod m_{2})\)<br>
+               \(x \equiv A_{3}(mod m_{3})\)<br>
+               \(\dots\)<br>
+               \(x \equiv A_{k}(mod m_{k})\)<br>
+               tem solução única \((mod 1*2*3*\dots *k)\)<br><br>
+
+               Essa solução é dada por:<br>
+               \(x=A_{1}M_{1}\overline{M_{1}}^{-1} + A_{2}M_{2}\overline{M_{2}}^{-1} + \dots +
+                A_{k}M_{k}\overline{M_{k}}^{-1}\)<br><br>
+
+                Onde:<br>
+                \(M_{i} = m_{1}*m_{2}*\dots*m_{i-1}*m_{i+1}*\dots*m_{k}\) (ou seja, pula o \(m_{i})\)<br>
+                \(\overline{M_{i}} = M_{i}(mod m_{i})\)<br>
+                \(\overline{M_{i}}^{-1}\) é o inverso multiplicativo de \(\overline{M_{i}}\) módulo \(m_{i}\),
+                 ou seja, o número tal que \(\overline{M_{i}}*\overline{M_{i}}^{-1}\ \equiv 1(modm_{1})\)<br><br>
+
+              Com um sistema de três congruências, teríamos que \(x\) vale:<br>
+              \(\\ A_{1}m_{2}m_{3}(m_{2}m_{3}mod(m_{1}))^{-1}\\ +
+                A_{2}m_{1}m_{3}(m_{1}m_{3}mod(m_{2}))^{-1}\\ +
+                A_{3}m_{1}m_{2}(m_{1}m_{2}mod(m_{3}))^{-1}\) <br><br>
+
+                A forma usual de calcular essa equação é preencher uma tabela com as
+                colunas \(A\), \(M\), \(\overline{M}\), \(\overline{M}^{-1}\) e
+                \(A*M*\overline{M}^{-1}\) de cada congruência e depois somar os resultados
+                da coluna \(A*M*\overline{M}^{-1}\).<br><br>
+
+                Prova de que o \(x\) sugerido realmente resolve o sistema (satisfaz todas as congruências): <br>
+                Vamos aplicar o valor de \(x\) na primeira equação. As outras saem de forma idêntica.<br>
+                Queremos provar que \(x \equiv A_{1}(mod m_{1})\)<br>
+                \(x = A_{1}M_{1}\overline{M_{1}}^{-1} + A_{2}M_{2}\overline{M_{2}}^{-1} + \dots +
+                 A_{k}M_{k}\overline{M_{k}}^{-1}\)<br>
+                 \(x \equiv A_{1}M_{1}\overline{M_{1}}^{-1}(mod m_{1})\), pois todos os \(M_{i}\) são múltiplos de \(m_{1}\),
+                  exceto o próprio \(M_{1}\), então os outros termos somem na divisão por \(m_{1}\).<br>
+                  Por exemplo, \(M_{2} = \boldsymbol{m_{1}}*m_{3}*\dots *m_{k}\), portanto
+                  \(A_{2}M_{2}\overline{M_{2}}^{-1} \equiv 0(modm_{1})\).<br>
+                 \(x \equiv A_{1}(mod m_{1})\), pois \(M_{1}\overline{M_{1}}^{-1}\) são inversos multiplicativos, ou seja,
+                  \(M_{1}\overline{M_{1}}^{-1} \equiv 1(mod m_{1})\), então podemos cancelá-los.<br><br>
+                Então está provado que o valor de \(x\) satisfaz a primeira equação.
+
+                <br>
+                <br>
+                <br>
+            </p>
+        </nav>
+
+        <div class="footer w3-red"> <h3>Made with ♥</h3></div>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              CommonHTML: { linebreaks: { automatic: true } },
+              "HTML-CSS": { linebreaks: { automatic: true } },
+                     SVG: { linebreaks: { automatic: true } }
+            });
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    </body>
+</html>

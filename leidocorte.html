@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Igor Fratel's homepage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="w3-bar w3-pink">
+            <a href="index.html" class="w3-button w3-bar-item w3-hover-white w3-round">Home</a>
+            <a href="aboutme.html" class="w3-button w3-bar-item w3-hover-white w3-round">About Me</a>
+            <a href="projects.html" class="w3-button w3-bar-item w3-hover-white w3-round">Projects</a>
+            <a href="posts.html" class="w3-button w3-bar-item w3-hover-white w3-round">Posts</a>
+            <a href="sources.html" class="w3-button w3-bar-item w3-hover-white w3-round">Sources</a>
+        </nav>
+        <nav class="w3-panel w3-light-gray w3-text-dark-gray">
+            <h2>Lei do corte</h2>
+            <p>Seja \(ax \equiv ay(modn)\). Se \(mdc(a,n) = 1\) então \(x \equiv y(modn)\).<br>
+               Essa é a lei do corte, um corolário do teorema da existência do inverso módulo \(n\).<br>
+               Teorema: \(a\) tem classe inversa \((mod n)\) sse \(mdc(a,n)=1\).<br><br>
+
+               Temos que \(ax \equiv ay(modn)\)<br>
+               Usando a definição de módulo, chegamos em \(ax = kn + r\) e \(ay = k'n + r\).<br>
+               Sabemos que eles têm o mesmo resto mas não necessariamente
+               o mesmo quociente. \(k\) e \(k'\) devem ser inteiros.<br>
+               Fazendo a diferença entre as duas expressões temos: <br>
+               \(ax-ay = kn - k'n\)<br>
+               \(a(x-y) = n(k-k')\)<br>
+               Portanto, \(n\) divide \(a(x-y)\) (não tem resto).<br>
+               \(\frac{a(x-y)}{n} = (k-k')\)<br>
+               Se \(mdc(a,n) = 1\), então \(n\) não divide \(a\), eles são coprimos.<br>
+               Sabendo que \(n\) divide \(a(x-y)\) e \(n\) não divide \(a\), então \(n\) deve dividir \(x-y\).<br>
+               Portanto, \(x-y \equiv 0(modn)\)<br>
+               \(x \equiv y(modn)\), que é o que queríamos demonstrar.
+
+                <br>
+                <br>
+                <br>
+            </p>
+        </nav>
+
+        <div class="footer w3-red"> <h3>Made with ♥</h3></div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    </body>
+</html>

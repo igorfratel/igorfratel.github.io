@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Igor Fratel's homepage</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav class="w3-bar w3-pink">
+            <a href="index.html" class="w3-button w3-bar-item w3-hover-white w3-round">Home</a>
+            <a href="aboutme.html" class="w3-button w3-bar-item w3-hover-white w3-round">About Me</a>
+            <a href="projects.html" class="w3-button w3-bar-item w3-hover-white w3-round">Projects</a>
+            <a href="posts.html" class="w3-button w3-bar-item w3-hover-white w3-round">Posts</a>
+            <a href="sources.html" class="w3-button w3-bar-item w3-hover-white w3-round">Sources</a>
+        </nav>
+        <nav class="w3-panel w3-light-gray w3-text-dark-gray">
+            <h2>Notas sobre "Feynman Lectures on Computation"</h2>
+            <p>
+                O livro trata das aulas do curso de computação que Richard Feynman deu entre 1983 e 1986.<br>
+                Ciência da computação não é realmente uma ciência pois não lida com fenômenos naturais. Não
+                é matemática embora utilize o raciocínio matemático extensivamente. É mais parecida com engenharia, pelo
+                seu aspecto prático.<br>
+                No entanto, a ciência da computação ajudou a iluminar alguns conceitos profundamente teóricos:<br>
+                A natureza da linguagem, pois as primeiras tentativas de tradução automática falharam terrivelmente
+                por causa do nosso entendimento incompleto de gramática.<br>
+                Limites da computabilidade, ou o que podemos ou não saber sobre o mundo à nossa volta.<br>
+                A verdadeira natureza da inteligência, comparando humanos com inteligências artificiais.<br><br>
+
+                Um computador com um conjunto básico de procedimentos pode fazer qualquer coisa que um computador
+                mais sofisticado pode fazer, embora possivelmente de forma menos eficiente. Esse é o princípio
+                da universalidade.<br><br>
+
+                Sobre o aprendizado: Feynman diz que a melhor forma de aprender, pra ele, é aprender certo
+                conceito tentando modificá-lo e vendo quais implicações as modificações têm. Tentar
+                simplificar certas coisas ou extender certas coisas, lembrar apenas das ideias gerais e tentar
+                descobrir os detalhes sozinho. Caso fique empacado, abra um livro e leia sobre o assunto em específico
+                que tem empacou. O ponto principal é tentar encontrar a solução sozinho antes de ler.<br>
+                "When I start straight off to read someone else's solution I find it boring and uninteresting, with
+                no way of putting the whole picture together."<br>
+                "If you keep proving stuff that others have done, getting confidence, increasing complexities of your
+                solutions- for the fun of it- then one day you'll turn around and discover that nobody actually
+                did that one!""<br><br>
+
+                Capítulo 3: Teoria da computação <br>
+                Há um limite para o que podemos computar? Dado um computador poderoso o suficiente, poderíamos
+                computar qualquer coisa?<br>
+
+                Para poder computar algo, precisamos tranformar o problema em um conjunto de "procedimentos efetivos"- um
+                algortimo.<br>
+                Quais problemas matemáticos podiam ser resolvidos através de procedimentos efetivos era um assunto muito
+                estudo por matemáticos nos anos 30, antes da existência dos computadores modernos.<br><br>
+
+                O modelo de computabilidade mais famoso e comum é a Máquina Universal de Turing. A máquina de Turing
+                consegue resolver qualquer problema para o qual existe um procedimento efetivo. Se a máquina de Turing não
+                consegue resolver o problema, então não há um procedimento efetivo para o problema.<br><br>
+
+                Uma máquina de Turing consiste de uma máquina que se move por sobre uma fita e manipula seu conteúdo.<br>
+                Primeiro vamos analisar uma máquina de estados finitos(FSM), que é uma máquina de Turing sem a fita.<br>
+                Uma máquina de estados finita começa em um estado inicial e recebe entradas. A cada entrada recebida, a
+                máquina transiciona de estado e devolve uma saída. Uma transição de estado depende somente da entrada
+                e do estado inicial<br>
+                Podemos fazer FSMs que causam delay na entrada, somam dois números, etc. Porém há limitações para FSMs.<br>
+                Por exemplo, multiplicação e parenthesis matching de sequências arbitrárias, pois FSMs não possuem
+                memória infinita(note que não precisamos de estados infinitos para somar dois números arbitrários).<br><br>
+
+                Máquina de Turing: a cabeça da máquina lê uma posição da fita, apaga o conteúdo da posição e
+                escreve algo nela (pode ser o mesmo conteúdo anterior) e se move uma posição pra esquerda ou
+                pra direita.<br>
+                Apenas uma parte finita da fita tem coisas escritas. O resto está em branco.<br>
+                Sendo \(Q_{i}\) e \(S_{i}\) o estado da máquina e o símbolo lido no tempo \(T\), temos:<br>
+                \(Q_{j} = F(Q_{i}, S_{i})\), o estado no tempo \(T+1\)<br>
+                \(S_{j} = G(Q_{i}, S_{i})\), o símbolo escrito em \(T+1\)<br>
+                \(D = D(Q_{i}, S_{i})\) , a direção na qual a máquina se move em \(T+1\)<br>
+                Ou seja, são todos funções do estado e do símbolo lido.<br>
+                Uma máquina de turing universal, que consegue resolver qualquer problema que uma máquina de
+                turing qualquer pode resolver, funciona "imitando" outra máquina. Ela recebe as funções de uma certa
+                máquina e um estado inicial e através disso consegue imitar o funcionamento de qualquer outra máquina.<br><br>
+
+                Uma máquina de Turing específica seria a contadora de paridade, que diz se o número de 1s escritos na fita
+                é par ou ímpar.<br>
+                Ela começa no estado par \(Q_{0}\) e lê a posição. Se for um 0, ela não muda de estado e se move pra direita.
+                Se for um 1, ela muda para o estado \(Q_{1}\), apaga o 1 e reescreve um 0 e se move pra direita.<br>
+                No estado \(Q_{1}\), se ela ler um 0, move pra direita. Se ler um 1, muda para o estado \(Q_{0}\), apaga o 1
+                e reescreve um 0 e move pra direita.<br>
+                Se ela ler um \(E\) na fita, que é o marcador do final da string, ela apaga o \(E\) e escreve 0 ou 1 dependendo
+                do estado.<br>
+                As máquinas são descritas por uma lista de quíntuplas: [estado inicial, leitura, novo estado, escrita, direção].<br><br>
+
+                Problema da parada: Suponha que tenhamos uma variável \(x\) e uma função \(F(x)\). Nós dizemos que \(F(x)\) é
+                computável se conseguimos achar uma máquina de Turing que recebe uma fita com \(x\) escrito em algum lugar e
+                eventualmente vai parar a execução com \(F(x)\) escrito na fita.<br>
+                Existem casos em que a máquina de Turing não para.<br>
+                Podemos dizer com quais valores de \(x\) a máquina não para? Em alguns casos, sim, em geral, não.<br>
+                É impossível construir uma função computável que prevê se uma dada máquina irá parar com um dado valor
+                de entrada.<br>
+                Supondo uma máquina D que sempre para, recebe os estados de uma máquina T, escreve "sim" se T para e "não"
+                se T não para.<br>
+                Então podemos construir uma máquina Z que para quando D devolve "não" e não para quando D devolve "sim".<br>
+                Se rodarmos D com as informações de Z como entrada para que D decida se Z para, então teremos uma contradição,
+                pois se Z para, então D devolve "sim", mas se D devolve "sim", então Z não para. Por isso é impossível construir
+                uma máquina tal como D.<br><br>
+
+                
+
+
+
+
+
+
+
+
+
+                <br>
+                <br>
+                <br>
+            </p>
+        </nav>
+
+        <div class="footer w3-red"> <h3>Made with ♥</h3></div>
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+              CommonHTML: { linebreaks: { automatic: true } },
+              "HTML-CSS": { linebreaks: { automatic: true } },
+                     SVG: { linebreaks: { automatic: true } }
+            });
+        </script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+    </body>
+</html>
