@@ -69,8 +69,8 @@ markdown: kramdown
 author:
   name             : "Igor Fratel Santana"
   avatar           : "/assets/images/bio-photo.jpg"
-  bio              : "Software Engineer.\n
-                      Interested in data science and machine learning.\n
+  bio              : "Software Engineer.<br>
+                      Interested in data science and machine learning.<br>
                       Aspiring polyglot."
   location         : "São Paulo, Brazil"
   email            : "igorfratelsantana@gmail.com"
