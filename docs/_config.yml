@@ -56,4 +56,4 @@ plugins:
 #   - vendor/ruby/
 
 # Build settings
-  markdown: kramdown
+markdown: kramdown
